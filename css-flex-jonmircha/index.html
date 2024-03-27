@@ -22,10 +22,16 @@
         /* nowrap | wrap | wrap-reverse */
         flex-flow: column wrap; 
         /* es un shortcut de flex-direction y flex-wrap*/
-        justify-content: flex-end;
+        justify-content: flex-start;
+        /* Define la alineacion de los hijos en el eje principal (main axis)*/
         /* flex-start | center | flex-end | space-between | space-around | space-evently */
-        
-      
+        align-items: stretch;
+        /* Define la alineacion de los hijos en el eje transversal (cross axis), dentro de cada linea */
+        /* stretch | flex-start | flex-end | center | baseline */
+        align-content: flex-start;
+        /* Define la alineacion de los hijos en el eje transversal (cross axis), NO funciona cuando los hijos estan en una sola linea
+        (cuando flex:wrap:nowrap No funciona) */
+        /* flex-end | flex-start | center | space-between | space-around | space-evenly */
       }
 
       .item {
@@ -34,6 +40,11 @@
         height: 20%;
         background-color: #666;
       }
+
+      /* .item:nth-child(2),
+      .item:nth-child(17){
+        font-size: 250%;
+      } */
     </style>
   </head>
   <body>
