@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplos Practicos Flexbox</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      .titulares {
+        padding: 1rem;
+        background-color: #222;
+        color: #eee;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .menu ul {
+        list-style-type: none;
+      }
+
+      .hero-image {
+        min-height: 100vh;
+        background-image: url("https://img.freepik.com/foto-gratis/codigo-aplicacion-programacion-ingenieros-afroamericanos-desarrollo-software-linea-servidor-nube-seguridad-firewall-codificacion-nueva-interfaz-usuario-programa-html-codigo-binario-desarrollo-web_482257-49867.jpg?w=996&t=st=1711832683~exp=1711833283~hmac=bc53e8f5774d0d3b15cb85f50cd4e2290da38dc298cea5bc181d3b83b27c38d7");
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, .95);
+        color: #fff;
+      }
+
+
+      .hero-image div {
+        min-height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, .75);
+        text-align: center;
+      }
+
+      .hero-image h1{
+        font-size: 5vw;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .menu ul {
+          display: flex;
+        }
+        .menu li {
+          padding: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="titulares header">
+      <div class="logo">Logo</div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Sección 1</a></li>
+          <li><a href="#">Sección 2</a></li>
+          <li><a href="#">Sección 3</a></li>
+          <li><a href="#">Sección 4</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Contenido</h2>
+      <article class="hero-image">
+        <div>
+          <h1>Flexbox is fuckin' Cool!!</h1>
+        </div>
+      </article>
+    </main>
+    <footer class="titulares">
+      <h2>Sticky Footer</h2>
+    </footer>
+  </body>
+</html>
