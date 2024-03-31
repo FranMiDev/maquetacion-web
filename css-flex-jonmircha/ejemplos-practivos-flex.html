@@ -19,6 +19,11 @@
         min-height: 100vh;
       }
 
+      img{
+        max-width: 100%;
+        height: auto;
+      }
+
       main {
         flex-grow: 1;
       }
@@ -49,23 +54,33 @@
         min-height: 100vh;
         background-image: url("https://img.freepik.com/foto-gratis/codigo-aplicacion-programacion-ingenieros-afroamericanos-desarrollo-software-linea-servidor-nube-seguridad-firewall-codificacion-nueva-interfaz-usuario-programa-html-codigo-binario-desarrollo-web_482257-49867.jpg?w=996&t=st=1711832683~exp=1711833283~hmac=bc53e8f5774d0d3b15cb85f50cd4e2290da38dc298cea5bc181d3b83b27c38d7");
         background-repeat: no-repeat;
-        background-color: rgba(0, 0, 0, .95);
+        background-color: rgba(0, 0, 0, 0.95);
         color: #fff;
       }
-
 
       .hero-image div {
         min-height: inherit;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, .75);
+        background-color: rgba(0, 0, 0, 0.75);
         text-align: center;
       }
 
-      .hero-image h1{
+      .hero-image h1 {
         font-size: 5vw;
       }
+
+      .flex-responsive{
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      .flex-responsive-item{
+        border: thin solid #F60;
+        flex: 1 1 200px;
+      }
+
 
       @media screen and (min-width: 1024px) {
         .header {
@@ -79,6 +94,20 @@
         }
         .menu li {
           padding: 0.5rem;
+        }
+        .flex-container{
+          display: flex;
+          align-items: center;
+        }
+
+        .flex-item{
+          flex: 0 0 50%;
+        }
+        .flex-order-1{
+          order: 1;
+        }
+        .flex-row-reverse{
+          flex-direction: row-reverse;
         }
       }
     </style>
@@ -96,12 +125,61 @@
       </nav>
     </header>
     <main>
-      <h2>Contenido</h2>
       <article class="hero-image">
         <div>
           <h1>Flexbox is fuckin' Cool!!</h1>
         </div>
       </article>
+      <section class="flex-container">
+        <article class="flex-item">
+          <h2>Titulo</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+            iure deleniti illum architecto error. Dolorem, fugiat? Veritatis
+            labore, quaerat reiciendis porro et in dolor aspernatur, quia,
+            adipisci facere commodi dolores.
+          </p>
+        </article>
+        <article class="flex-item">
+          <img src="https://loremflickr.com/400/400">
+        </article>
+      </section>
+      <section class="flex-container flex-row-reverse">
+        <article class="flex-item">
+          <h2>Titulo</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
+            iure deleniti illum architecto error. Dolorem, fugiat? Veritatis
+            labore, quaerat reiciendis porro et in dolor aspernatur, quia,
+            adipisci facere commodi dolores.
+          </p>
+        </article>
+        <article class="flex-item">
+          <img src="https://loremflickr.com/400/400/paris">
+        </article>
+      </section>
+      <h2>Responsive sin Media Queries con Flexbox</h2>
+      <section class="flex-responsive">
+        <article class="flex-responsive-item">Item resposivo 1</article>
+        <article class="flex-responsive-item">Item resposivo 2</article>
+        <article class="flex-responsive-item">Item resposivo 3</article>
+        <article class="flex-responsive-item">Item resposivo 4</article>
+        <article class="flex-responsive-item">Item resposivo 5</article>
+        <article class="flex-responsive-item">Item resposivo 6</article>
+        <article class="flex-responsive-item">Item resposivo 7</article>
+        <article class="flex-responsive-item">Item resposivo 8</article>
+        <article class="flex-responsive-item">Item resposivo 9</article>
+        <article class="flex-responsive-item">Item resposivo 10</article>
+        <article class="flex-responsive-item">Item resposivo 11</article>
+        <article class="flex-responsive-item">Item resposivo 12</article>
+        <article class="flex-responsive-item">Item resposivo 13</article>
+        <article class="flex-responsive-item">Item resposivo 14</article>
+        <article class="flex-responsive-item">Item resposivo 15</article>
+        <article class="flex-responsive-item">Item resposivo 16</article>
+        <article class="flex-responsive-item">Item resposivo 17</article>
+        <article class="flex-responsive-item">Item resposivo 18</article>
+        <article class="flex-responsive-item">Item resposivo 19</article>
+      </section>
     </main>
     <footer class="titulares">
       <h2>Sticky Footer</h2>
