@@ -117,3 +117,34 @@ img {
   grid-row: linea-r3 / linea-r4;
   grid-column: linea-c1 / linea-c4;
 }
+
+.grid-areas {
+  display: grid;
+  /* Grid de 2cx3r */
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: 100px 1fr 60px;
+  grid-template-areas:
+    "header header"
+    "content sidebar"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: red;
+}
+
+.article {
+  grid-area: content;
+  background-color: blue;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: cyan;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: bisque;
+}
