@@ -224,3 +224,42 @@ img {
   grid-column: 2 / 4;
   grid-row: 2 / 4;
 }
+
+.grid-order {
+  display: grid;
+  /* Grid 3cx2r */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-order .item:nth-child(1) {
+  /* default es 0. -1 0 1  */
+  order: 1;
+}
+
+.grid-order .item:nth-child(2) {
+  /* default es 0. -1 0 1  */
+  order: 2;
+}
+
+.grid-order .item:nth-child(5) {
+  /* default es 0. -1 0 1  */
+  order: -1;
+}
+
+.grid-align {
+  display: grid;
+  /* Grid 3cx2r */
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  /*en el eje x*/
+  justify-items: stretch;
+  justify-items: start;
+  justify-items: end;
+  justify-items: center;
+  /* en el eje y*/
+  align-items: stretch;
+  align-items: start;
+  align-items: end;
+  align-items: center;
+}
