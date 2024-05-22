@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Gradiente Radial</title>
+  </head>
+  <style>
+    body {
+      background: #223;
+    }
+
+    .element {
+      width: 500px;
+      height: 500px;
+      border: 5px solid black;
+      background-image: linear-gradient(-45deg, black, transparent),
+        radial-gradient(circle, black 0 35%, transparent 35% 100%),
+        repeating-radial-gradient(
+          circle,
+          red 2% 10%,
+          darkred 15% 25%,
+          black 30% 31%
+        );
+    }
+  </style>
+  <body>
+    <div class="element"></div>
+  </body>
+</html>
