@@ -1,0 +1,29 @@
+.parent {
+  background: lightgrey;
+  min-height: 200px;
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "menu content"
+    "foot foot";
+}
+
+.parent header {
+  grid-area: head;
+  background: indigo;
+}
+
+.parent .menu {
+  grid-area: menu;
+  background: darkred;
+}
+
+.parent .content {
+  grid-area: content;
+  background: darkgreen;
+}
+
+.parent .content {
+  grid-area: foot;
+  background: darkslategrey;
+}
