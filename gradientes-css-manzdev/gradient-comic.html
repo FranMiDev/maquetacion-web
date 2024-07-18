@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Gradiente Conico</title>
+  </head>
+  <style>
+    body {
+      background: rgb(62, 62, 112);
+    }
+
+    .element {
+      width: 500px;
+      height: 500px;
+      border: 5px solid black;
+      animation: radar 3s linear infinite;
+    }
+
+    @property --point {
+      syntax: "<angle>";
+      inherits: true;
+      initial-value: 0deg;
+    }
+
+    @keyframes radar {
+      0% {
+        --point: 0deg;
+        background: conic-gradient(from var(--point) at 50% 50%, green, black);
+      }
+      100% {
+        --point: 300deg;
+        background: conic-gradient(from var(--point) at 50% 50%, green, black);
+      }
+    }
+  </style>
+  <body>
+    <div class="element"></div>
+  </body>
+</html>
