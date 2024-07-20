@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 800px;
+  background-image: url("https://st.depositphotos.com/1004061/2699/i/450/depositphotos_26992163-stock-photo-business-skyscrapers-la-defense-paris.jpg");
+  background-size: cover;
+}
+
+.content{
+    font-size: 1.4em;
+    font-stretch: expanded;
+    height: 8em;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.6);
+    text-align: center;
+    color: white;
+    text-transform: 1px 1px #000;
+}
